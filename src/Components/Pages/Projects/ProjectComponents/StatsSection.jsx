@@ -10,10 +10,10 @@ const StatsSection = () => {
   // STATS DATA SECTION
   // This data could also come from props or API
   const stats = [
-    { value: '7+', label: 'Projects Completed', color: 'purple' },
+    { value: '5+', label: 'Projects Completed', color: 'purple' },
     { value: '10+', label: 'Technologies Used', color: 'indigo' },
-    { value: '1k+', label: 'Users Served', color: 'green' },
-    { value: '97%', label: 'Client Satisfaction', color: 'orange' }
+    { value: '500+', label: 'Users Served', color: 'green' },
+    { value: '90%', label: 'Client Satisfaction', color: 'orange' }
   ];
 
   return (

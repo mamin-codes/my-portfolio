@@ -168,9 +168,9 @@ const AboutMe = () => {
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                 <div className="relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-xl p-6 text-center border border-slate-700/50 transition-all duration-500 group-hover:border-transparent">
                   <div className="text-3xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text mb-2 group-hover:scale-110 transition-transform duration-300">
-                    1.5+
+                    6+
                   </div>
-                  <div className="text-gray-300 text-sm md:text-base">Years Experience</div>
+                  <div className="text-gray-300 text-sm md:text-base">Month Experience</div>
                 </div>
               </div>
               

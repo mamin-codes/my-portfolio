@@ -231,7 +231,7 @@ const EnhancedCallToActionSection = () => (
             {[
               { number: '50+', label: 'Components', gradient: 'from-purple-400 to-pink-400' },
               { number: '5+', label: 'Projects', gradient: 'from-cyan-400 to-blue-400' },
-              { number: '95%', label: 'Performance', gradient: 'from-green-400 to-emerald-400' }
+              { number: '90%', label: 'Performance', gradient: 'from-green-400 to-emerald-400' }
             ].map((stat, index) => (
               <div
                 key={index}
@@ -255,7 +255,7 @@ const EnhancedCallToActionSection = () => (
             {[
               { icon: '⚡', title: 'Lightning Fast', desc: 'Optimized React apps with modern performance techniques', gradient: 'from-purple-500 to-pink-500' },
               { icon: '🎨', title: 'Pixel Perfect', desc: 'Responsive designs with smooth animations & interactions', gradient: 'from-cyan-500 to-blue-500' },
-              { icon: '🚀', title: 'Modern Stack', desc: 'React, Next.js, TypeScript & cutting-edge technologies', gradient: 'from-green-500 to-emerald-500' }
+              { icon: '🚀', title: 'Modern Stack', desc: 'React, Next.js, & cutting-edge technologies', gradient: 'from-green-500 to-emerald-500' }
             ].map((feature, index) => (
               <div
                 key={index}

@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaFolderOpen, FaWhatsapp } from "react
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Hero.css';
+import { Link } from "react-scroll";
 
 const roles = [
     "FRONTEND DEVELOPER",
@@ -159,11 +160,11 @@ const Hero = () => {
                             <h1 
                                 data-aos="fade-right"
                                 data-aos-delay="200"
-                                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
+                                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-bold leading-tight"
                             >
                                 <span className="text-transparent bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text drop-shadow-lg">Hello, I'm</span>
                                 <br />
-                                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent font-black tracking-tight">
+                                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text lg:text-4xl text-transparent font-black tracking-tight">
                                     MANIRUZZAMAN MAMIN
                                 </span>
                             </h1>
@@ -175,7 +176,7 @@ const Hero = () => {
                             data-aos-delay="300"
                             className="h-16 flex items-center justify-center lg:justify-start"
                         >
-                            <p className="text-lg md:text-3xl font-semibold text-gray-300 flex items-center">
+                            <p className="text-lg md:text-2xl font-semibold text-gray-300 flex items-center">
                                 <span className="text-transparent bg-gradient-to-r from-gray-300 to-gray-400 bg-clip-text">Professional</span>&nbsp;
                                 <span className="typewriter inline-flex text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text font-bold">
                                     {displayedText}
@@ -192,7 +193,7 @@ const Hero = () => {
                         className="group relative overflow-hidden"
                     >
                         <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div className="relative text-gray-300 text-lg leading-relaxed max-w-2xl backdrop-blur-xl bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 transition-all duration-500 group-hover:border-transparent mx-auto lg:mx-0">
+                        <div className="relative  text-gray-300 text-lg leading-relaxed max-w-2xl backdrop-blur-xl bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 transition-all duration-500 group-hover:border-transparent mx-auto lg:mx-0">
                             <p>
                                 I specialize in crafting <span className="text-purple-400 font-semibold">high-performance web applications</span> with
                                 modern frontend technologies. With expertise in <span className="text-cyan-400 font-semibold">React.js, Next.js, and TypeScript</span>,
@@ -208,41 +209,43 @@ const Hero = () => {
                     </div>
 
                     {/* Enhanced Action Buttons with AOS */}
-                    <div 
-                        data-aos="fade-up"
-                        data-aos-delay="500"
-                        className="flex flex-col sm:flex-row gap-4 pt-6 justify-center lg:justify-start"
-                    >
-                        <button
-                            onClick={handleStartProject}
-                            className="group relative px-8 py-4 overflow-hidden rounded-xl transition-all duration-500 transform hover:scale-105"
-                            aria-label="Start a project via WhatsApp"
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl"></div>
-                            <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            <div className="absolute inset-0 bg-white/10 rounded-xl scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                            <span className="relative z-10 text-white font-semibold flex items-center justify-center gap-2">
-                                <FaWhatsapp className="text-lg" />
-                                Start Project
-                                <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-                            </span>
-                        </button>
+                   {/* Enhanced Action Buttons with AOS */}
+<div 
+    data-aos="fade-up"
+    data-aos-delay="500"
+    className="flex flex-col sm:flex-row gap-4 pt-6 justify-center lg:justify-start"
+>
+    <button
+        onClick={handleStartProject}
+        className="group relative px-8 py-4 overflow-hidden rounded-xl transition-all duration-500 transform hover:scale-105 w-full sm:w-auto min-w-[160px]"
+        aria-label="Start a project via WhatsApp"
+    >
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 bg-white/10 rounded-xl scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+        <span className="relative z-10 text-white font-semibold flex items-center justify-center gap-2">
+            <FaWhatsapp className="text-lg" />
+            Hire Me
+            <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+        </span>
+    </button>
 
-                        <button
-                            onClick={handleViewPortfolio}
-                            className="group relative px-8 py-4 overflow-hidden rounded-xl transition-all duration-500 transform hover:scale-105"
-                            aria-label="View my portfolio projects"
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl"></div>
-                            <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            <div className="absolute inset-0 bg-white/10 rounded-xl scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                            <span className="relative z-10 text-white font-semibold flex items-center justify-center gap-2">
-                                <FaFolderOpen className="text-lg" />
-                                View Portfolio
-                            </span>
-                        </button>
-                    </div>
-
+    <Link to="projects" smooth={true} duration={500} offset={-70} className="w-full sm:w-auto">
+        <button
+            onClick={handleViewPortfolio}
+            className="group relative px-8 py-4 overflow-hidden rounded-xl transition-all duration-500 transform hover:scale-105 w-full min-w-[160px]"
+            aria-label="View my portfolio projects"
+        >
+            <div className="absolute inset-0 border border-purple-400/50 rounded-xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-white/10 rounded-xl scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+            <span className="relative z-10 text-white font-semibold flex items-center justify-center gap-2">
+                <FaFolderOpen className="text-lg" />
+                View My Work
+            </span>
+        </button>
+    </Link>
+</div>
                     {/* Enhanced Social Links with AOS */}
                     <div 
                         data-aos="fade-up"

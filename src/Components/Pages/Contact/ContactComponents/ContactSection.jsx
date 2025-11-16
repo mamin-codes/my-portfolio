@@ -1,15 +1,45 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
+  const form = useRef();
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
 
+    emailjs
+      .sendForm('service_fq1eqza', 'template_wp21zyt', form.current, {
+        publicKey: 'WRHu0LtPKUJ_TDxqa',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          setIsSubmitted(true);
+          setIsLoading(false);
+          // Reset form
+          e.target.reset();
+
+          // Auto hide success message after 5 seconds
+          setTimeout(() => {
+            setIsSubmitted(false);
+          }, 5000);
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setIsLoading(false);
+        },
+      );
+  };
   return (
     <section
-      
+
       className="relative min-h-screen py-12 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 overflow-hidden"
     >
       {/* Animated Background Blobs */}
@@ -166,33 +196,52 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
+           
           <div data-aos="fade-left" className="relative">
             <div className="bg-gray-800/50 backdrop-blur-lg rounded-3xl border border-gray-700/50 p-8 md:p-10 relative overflow-hidden">
               <h3 className="text-2xl font-bold text-white mb-6 text-center">
                 Send Me a Message
               </h3>
-              <form className="space-y-5">
+              <form ref={form} onSubmit={sendEmail} className="space-y-5">
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="w-full px-4 py-3 rounded-xl bg-gray-700/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all"
-                />
+                  name="user_name"
+                  className="cursor-pointer w-full px-4 py-3 rounded-xl bg-gray-700/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all"
+                required/>
                 <input
                   type="email"
+                  name="user_email"
                   placeholder="Your Email"
                   className="w-full px-4 py-3 rounded-xl bg-gray-700/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all"
-                />
+                required/>
                 <textarea
                   rows="5"
+                  name="message"
                   placeholder="Your Message"
-                  className="w-full px-4 py-3 rounded-xl bg-gray-700/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all"
-                ></textarea>
-                <button
+                  className="cursor-pointer w-full px-4 py-3 rounded-xl bg-gray-700/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all"
+                required></textarea>
+                <input
                   type="submit"
-                  className="w-full py-3 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-purple-500 hover:to-pink-500 text-white font-semibold rounded-xl transition-transform duration-300 hover:scale-105 shadow-lg"
-                >
+                  value="Send"
+                  className="cursor-pointer w-full py-3 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-purple-500 hover:to-pink-500 text-white font-semibold rounded-xl transition-transform duration-300 hover:scale-105 shadow-lg"
+
                   Send Message
-                </button>
+                />
+                {isSubmitted &&  (
+                  <div className="fixed top-5 right-5 bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg z-50 animate-fade-in">
+                    <div className="flex items-center space-x-3">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <p className="font-semibold">Message Sent Successfully!</p>
+                        <p className="text-sm">Thanks for contacting me.</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+               
               </form>
             </div>
           </div>
