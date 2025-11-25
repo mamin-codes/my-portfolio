@@ -10,7 +10,7 @@ const Navbar = () => {
   const toggleMenu = () => setNavOpen(!navOpen);
 
   const navItems = [
-    { name: "Home", id: "home" },
+    { name: "Homeee", id: "home" },
     { name: "About", id: "about" },
     { name: "Skills", id: "skills" },
     { name: "Projects", id: "projects" },
