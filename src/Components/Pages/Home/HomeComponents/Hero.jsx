@@ -290,7 +290,7 @@ const Hero = () => {
                                 {/* Profile Image Container */}
                                 <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700/50 backdrop-blur-sm">
                                     <img
-                                        src="https://i.ibb.co.com/ZpsHBzt6/Gemini-Generated-Image-4dega94dega94deg.png"
+                                        src="https://i.ibb.co.com/zV7GQnH3/Gemini-Generated-Image-4dega94dega94de.jpg"
                                         alt="Maniruzzaman Mamin - Frontend Developer"
                                         className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                                         loading="lazy"
