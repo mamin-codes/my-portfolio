@@ -45,14 +45,15 @@ const Resume = () => {
         >
           {/* Download CV - Enhanced */}
           <a
-            href=""
-            download=""
+            href="https://drive.google.com/file/d/1Kiw6hrazXDgMkLz2CLeZiDMhNx13KHHJ/view"
+            download="https://drive.google.com/file/d/1Kiw6hrazXDgMkLz2CLeZiDMhNx13KHHJ/view"
+            target="_blank"
             className="group relative overflow-hidden w-full sm:w-auto"
           >
             {/* Animated Border */}
             <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-xl blur opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
             
-            <button className="relative w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold py-5 px-10 rounded-xl shadow-2xl hover:shadow-purple-500/30 transition-all duration-500 transform hover:scale-105 flex items-center justify-center gap-4 backdrop-blur-sm">
+            <button className="cursor-pointer relative w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold py-5 px-10 rounded-xl shadow-2xl hover:shadow-purple-500/30 transition-all duration-500 transform hover:scale-105 flex items-center justify-center gap-4 backdrop-blur-sm">
               {/* Icon Container */}
               <div className="relative">
                 <svg
@@ -106,7 +107,7 @@ const Resume = () => {
               <span className="text-lg font-bold">Preview CV</span>
               
               {/* Shine Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+              <div className="cursor-pointer absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
             </div>
           </button>
         </div>

@@ -28,7 +28,7 @@ const Hero = () => {
 
     // WhatsApp integration
     const handleStartProject = () => {
-        const phoneNumber = "1234567890";
+        const phoneNumber = "+8801400139956";
         const message = "Hello! I'm interested in starting a project with you.";
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, "_blank");
@@ -196,7 +196,7 @@ const Hero = () => {
                         <div className="relative  text-gray-300 text-lg leading-relaxed max-w-2xl backdrop-blur-xl bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 transition-all duration-500 group-hover:border-transparent mx-auto lg:mx-0">
                             <p>
                                 I specialize in crafting <span className="text-purple-400 font-semibold">high-performance web applications</span> with
-                                modern frontend technologies. With expertise in <span className="text-cyan-400 font-semibold">React.js, Next.js, and TypeScript</span>,
+                                modern frontend technologies. With expertise in <span className="text-cyan-400 font-semibold">React.js and Next.js</span>,
                                 I build <span className="text-pink-400 font-semibold">scalable, responsive, and user-centric interfaces</span> that deliver
                                 exceptional digital experiences.
                             </p>
@@ -217,7 +217,7 @@ const Hero = () => {
 >
     <button
         onClick={handleStartProject}
-        className="group relative px-8 py-4 overflow-hidden rounded-xl transition-all duration-500 transform hover:scale-105 w-full sm:w-auto min-w-[160px]"
+        className="cursor-pointer group relative px-8 py-4 overflow-hidden rounded-xl transition-all duration-500 transform hover:scale-105 w-full sm:w-auto min-w-[160px]"
         aria-label="Start a project via WhatsApp"
     >
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl"></div>
@@ -233,7 +233,7 @@ const Hero = () => {
     <Link to="projects" smooth={true} duration={500} offset={-70} className="w-full sm:w-auto">
         <button
             onClick={handleViewPortfolio}
-            className="group relative px-8 py-4 overflow-hidden rounded-xl transition-all duration-500 transform hover:scale-105 w-full min-w-[160px]"
+            className="cursor-pointer group relative px-8 py-4 overflow-hidden rounded-xl transition-all duration-500 transform hover:scale-105 w-full min-w-[160px]"
             aria-label="View my portfolio projects"
         >
             <div className="absolute inset-0 border border-purple-400/50 rounded-xl"></div>
