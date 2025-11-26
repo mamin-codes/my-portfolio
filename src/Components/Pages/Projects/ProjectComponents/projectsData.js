@@ -37,7 +37,7 @@ export const projectsData = [
     "Clean Typography & Spacing",
     "Modern Card-based Design"
   ],
-  "liveUrl": "https://techblog2233.netlify.app/",
+  "liveUrl": "https://techblog40.netlify.app/",
   "codeUrl": "https://github.com/mamin-codes/blog-site"
 },
   {
